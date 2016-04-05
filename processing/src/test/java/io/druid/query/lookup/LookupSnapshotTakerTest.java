@@ -57,7 +57,7 @@ public class LookupSnapshotTakerTest
     lookupSnapshotTaker = new LookupSnapshotTaker(mapper, basePersistDirectory);
     mapper.registerSubtypes(LookupFactoryMock.class);
     mapper.registerSubtypes(LookupExtractorFactory.class);
-    mapper.addMixIn(LookupExtractorFactory.class, LookupFactoryMock.class);
+    mapper.addMixInAnnotations(LookupExtractorFactory.class, LookupFactoryMock.class);
   }
 
   @Test

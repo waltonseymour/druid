@@ -21,6 +21,8 @@ package io.druid.guice;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.introspect.AnnotationIntrospectorPair;
+import com.fasterxml.jackson.databind.introspect.GuiceAnnotationIntrospector;
+import com.fasterxml.jackson.databind.introspect.GuiceInjectableValues;
 import com.google.inject.Binder;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
