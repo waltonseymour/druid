@@ -84,6 +84,7 @@ public class CliBroker extends ServerRunnable
                 TieredBrokerConfig.DEFAULT_BROKER_SERVICE_NAME
             );
             binder.bindConstant().annotatedWith(Names.named("servicePort")).to(8082);
+            binder.bindConstant().annotatedWith(Names.named("serviceHost")).to("127.0.0.1");
 
             binder.bind(QueryToolChestWarehouse.class).to(MapQueryToolChestWarehouse.class);
 

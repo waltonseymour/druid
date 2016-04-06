@@ -70,7 +70,7 @@ public class DruidNode
   @JsonCreator
   public DruidNode(
       @JacksonInject @Named("serviceName") @JsonProperty("service") String serviceName,
-      @JsonProperty("host") String host,
+      @JacksonInject @Named("serviceHost") @JsonProperty("host") String host,
       @JacksonInject @Named("servicePort") @JsonProperty("port") Integer port
   )
   {

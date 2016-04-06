@@ -117,6 +117,7 @@ public class CliOverlord extends ServerRunnable
                   .annotatedWith(Names.named("serviceName"))
                   .to(IndexingServiceSelectorConfig.DEFAULT_SERVICE_NAME);
             binder.bindConstant().annotatedWith(Names.named("servicePort")).to(8090);
+            binder.bindConstant().annotatedWith(Names.named("serviceHost")).to("127.0.0.1");
 
             JsonConfigProvider.bind(binder, "druid.indexer.queue", TaskQueueConfig.class);
             JsonConfigProvider.bind(binder, "druid.indexer.task", TaskConfig.class);

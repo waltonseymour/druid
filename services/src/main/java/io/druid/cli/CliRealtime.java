@@ -63,6 +63,7 @@ public class CliRealtime extends ServerRunnable
           {
             binder.bindConstant().annotatedWith(Names.named("serviceName")).to("druid/realtime");
             binder.bindConstant().annotatedWith(Names.named("servicePort")).to(8084);
+            binder.bindConstant().annotatedWith(Names.named("serviceHost")).to("127.0.0.1");
           }
         },
         new ChatHandlerServerModule(properties),

@@ -78,6 +78,7 @@ public class CliMiddleManager extends ServerRunnable
           {
             binder.bindConstant().annotatedWith(Names.named("serviceName")).to("druid/middlemanager");
             binder.bindConstant().annotatedWith(Names.named("servicePort")).to(8091);
+            binder.bindConstant().annotatedWith(Names.named("serviceHost")).to("127.0.0.1");
 
             IndexingServiceModuleHelper.configureTaskRunnerConfigs(binder);
 
