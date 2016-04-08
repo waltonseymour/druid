@@ -124,6 +124,7 @@ public class CliPeon extends GuiceRunnable
           public void configure(Binder binder)
           {
             binder.bindConstant().annotatedWith(Names.named("serviceName")).to("druid/peon");
+            binder.bindConstant().annotatedWith(Names.named("serviceHost")).to("127.0.0.1");
             binder.bindConstant().annotatedWith(Names.named("servicePort")).to(-1);
 
             PolyBind.createChoice(
