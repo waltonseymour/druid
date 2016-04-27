@@ -17,10 +17,17 @@
  * under the License.
  */
 
-package io.druid.segment.realtime;
+package io.druid.indexing.overlord.config;
 
-/**
- */
-public abstract class RealtimeCuratorDataSegmentAnnouncerConfig
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class WorkerTaskRunnerConfig
 {
+  @JsonProperty
+  private String minWorkerVersion = "0";
+
+  public String getMinWorkerVersion()
+  {
+    return minWorkerVersion;
+  }
 }
